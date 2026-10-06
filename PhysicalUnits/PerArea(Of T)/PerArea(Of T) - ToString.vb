@@ -1,0 +1,18 @@
+﻿Option Strict On
+Option Infer On
+
+Partial Structure PerArea(Of T As {Structure, IUnitSupportingArithmetics, IEquatable(Of T), IComparable(Of T)})
+
+    Public Overrides Function ToString() As String
+        If IsNaN Then
+            Return $"{Double.NaN}"
+        ElseIf IsPositiveInfinity Then
+            Return Double.PositiveInfinity.ToString
+        ElseIf IsNegativeInfinity Then
+            Return Double.NegativeInfinity.ToString
+        Else
+            Return $"{Me._ValuePerSquaremeter}/m²"
+        End If
+    End Function
+
+End Structure
