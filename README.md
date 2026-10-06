@@ -65,6 +65,7 @@ PhysicalUnits follows a few simple principles:
 - Units should be visible in the code.
 - Invalid dimensional operations should be prevented whenever possible triggering a compiler error.
 - Engineering calculations should remain easy to read.
+- PhysicalUnits should be used for UI, serialization, and API. It should not be used in computationally intensive calculations.
 
 ## API Overview
 
@@ -156,7 +157,6 @@ physical quantities internally convert the given values into the primary unit
 | Time          | *use .NET TimeSpan structure*                                         |
 | Velocity      | *`MetersPerSecond`*, `MetersPerDay`, ...                              |
 | Volume        | *`CubicMeters`*, `CubicCentimeters`, `CubicMillimeters`, ...          |
-| ------------- | --------------------------------------------------------------------- |
 
 ## Contributing
 
